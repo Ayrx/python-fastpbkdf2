@@ -5,7 +5,7 @@ from fastpbkdf2._fastpbkdf2 import ffi, lib
 
 def pbkdf2_hmac(name, password, salt, rounds, dklen=None):
     if name not in ["sha1", "sha256", "sha512"]:
-        return ValueError(
+        raise ValueError(
             "Algorithm {} not supported. "
             "Please use sha1, sha256 or sha512".format(name)
         )
