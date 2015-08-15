@@ -1,0 +1,3 @@
+include build_fastpbkdf2.py
+
+recursive-include src *.py *.c *.h
