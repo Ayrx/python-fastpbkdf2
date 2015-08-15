@@ -1,7 +1,9 @@
+from __future__ import absolute_import, division, print_function
+
 import sys
 from distutils.command.build import build
 
-from setuptools import find_packages, setup
+from setuptools import setup
 from setuptools.command.install import install
 from setuptools.command.test import test
 
@@ -11,7 +13,7 @@ SIX_DEPENDENCY = "six>=1.4.1"
 
 
 CFFI_MODULES = [
-    "build_fastpbkdf2.py:ffi",
+    "src/build_fastpbkdf2.py:ffi",
 ]
 
 
@@ -183,7 +185,8 @@ setup(
         CFFI_DEPENDENCY,
         SIX_DEPENDENCY,
     ],
-    packages=find_packages(exclude=["tests*"]),
+    package_dir={"": "src"},
+    packages=["fastpbkdf2"],
     zip_safe=False,
     classifiers=[
         "Programming Language :: Python :: Implementation :: CPython",

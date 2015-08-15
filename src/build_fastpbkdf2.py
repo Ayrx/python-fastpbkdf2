@@ -4,7 +4,7 @@ import os
 
 from cffi import FFI
 
-DIR = os.path.join(os.path.dirname(__file__), "src")
+DIR = os.path.join(os.path.dirname(__file__), "c")
 
 ffi = FFI()
 ffi.cdef(
