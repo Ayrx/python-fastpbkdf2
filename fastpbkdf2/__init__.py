@@ -16,12 +16,13 @@ def pbkdf2_hmac(name, password, salt, rounds, dklen=None):
         "sha512": (lib.fastpbkdf2_hmac_sha512, 64),
     }
 
-    out = ffi.new("uint8_t[]", algorithm[name][1])
+    out_length = dklen or algorithm[name][1]
+    out = ffi.new("uint8_t[]", out_length)
     algorithm[name][0](
         password, len(password),
         salt, len(salt),
         rounds,
-        out, algorithm[name][1]
+        out, out_length
     )
 
     return ffi.string(out)
