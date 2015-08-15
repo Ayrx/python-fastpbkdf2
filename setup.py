@@ -183,7 +183,6 @@ setup(
         CFFI_DEPENDENCY,
         SIX_DEPENDENCY,
     ],
-    package_dir={"": "src"},
     packages=find_packages(exclude=["tests*"]),
     zip_safe=False,
     classifiers=[

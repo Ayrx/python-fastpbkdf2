@@ -28,7 +28,7 @@ ffi.cdef(
 )
 
 ffi.set_source(
-    "fastpbkdf2",
+    "_fastpbkdf2",
     """
     #include "fastpbkdf2.h"
     """,
