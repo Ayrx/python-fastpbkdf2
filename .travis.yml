@@ -1,0 +1,21 @@
+language: python
+os:
+    - linux
+
+env:
+    matrix:
+        - TOX_ENV=py27
+        - TOX_ENV=py33
+        - TOX_ENV=py34
+        - TOX_ENV=pypy
+        - TOX_ENV=pep8
+        - TOX_ENV=py3pep8
+
+install:
+    - ./.travis/install.sh
+
+script:
+    - ./.travis/run.sh
+
+after_success:
+    - source ~/.venv/bin/activate && coveralls
