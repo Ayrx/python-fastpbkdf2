@@ -25,4 +25,4 @@ def pbkdf2_hmac(name, password, salt, rounds, dklen=None):
         out, out_length
     )
 
-    return ffi.string(out)
+    return ffi.buffer(out)[:]
