@@ -11,6 +11,29 @@ it is about 40% faster than the standard library implementation.
 
 python-fastpbkdf2 supports and is tested against Python versions 2.7, 3.3, 3.4.
 
+# Installation
+
+python-fastpbkdf2 can be installed with pip:
+
+```
+pip install fastpbkdf2
+```
+
+python-fastpbkdf2 depends on CFFI to bind C code. `libffi-dev` and `python-dev`
+may be required and can be installed with various package managers such as yum
+or apt-get.
+
+# How to use
+
+python-fastpbkdf2 provides an interface compatible wtih
+[`hashlib.pbkdf2_hmac`](https://docs.python.org/3/library/hashlib.html#hashlib.pbkdf2_hmac).
+The module contains a single function that can be imported in place of
+`hashlib.pbkdf2_hmac`.
+
+```python
+from fastpbkdf2 import pbkdf2_hmac
+```
+
 # License
 
 python-fastpbkdf2 is made available under both the BSD and Apache Software
