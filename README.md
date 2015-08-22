@@ -2,7 +2,7 @@ python-fastpbkdf2
 ===========
 
 [![Build Status](https://travis-ci.org/Ayrx/python-fastpbkdf2.svg?branch=master)](https://travis-ci.org/Ayrx/python-fastpbkdf2)
-[![Coverage Status](https://img.shields.io/coveralls/Ayrx/python-fastpbkdf2.svg)](https://coveralls.io/r/Ayrx/python-fastpbkdf2)
+[![codecov.io](http://codecov.io/github/Ayrx/python-fastpbkdf2/coverage.svg?branch=master)](http://codecov.io/github/Ayrx/python-fastpbkdf2?branch=master)
 
 python-fastpbkdf2 is a set of Python bindings for
 [fastpbkdf2](https://github.com/ctz/fastpbkdf2) with an interface compatible
