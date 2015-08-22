@@ -17,4 +17,4 @@ script:
     - ./.travis/run.sh
 
 after_success:
-    - source ~/.venv/bin/activate && coveralls
+        - ./.travis/upload_coverage.sh
