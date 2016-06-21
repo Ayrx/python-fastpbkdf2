@@ -180,7 +180,7 @@ class DummyPyTest(test):
 setup(
     name="fastpbkdf2",
     description="A faster implementation of PBKDF2",
-    version="0.1",
+    version="0.2.dev1",
     license="BSD or Apache License, Version 2.0",
     url="https://github.com/Ayrx/python-fastpbkdf2",
     author="Terry Chia",

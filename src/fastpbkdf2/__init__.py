@@ -7,6 +7,7 @@ from __future__ import absolute_import, division, print_function
 from fastpbkdf2._fastpbkdf2 import ffi, lib
 
 
+FASTPBKDF2_GIT_HASH = "6442ac9"
 algorithm = {
     "sha1": (lib.fastpbkdf2_hmac_sha1, 20),
     "sha256": (lib.fastpbkdf2_hmac_sha256, 32),

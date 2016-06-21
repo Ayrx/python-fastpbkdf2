@@ -4,7 +4,7 @@ This is a fast PBKDF2-HMAC-{SHA1,SHA256,SHA512} implementation in C.
 It uses OpenSSL's hash functions, but out-performs OpenSSL's own PBKDF2
 thanks to [various optimisations in the inner loop](https://jbp.io/2015/08/11/pbkdf2-performance-matters/#strategies).
 
-[![Build Status](https://travis-ci.org/ctz/fastpbkdf2.svg)](https://travis-ci.org/ctz/fastpbkdf2)
+[![Build Status](https://travis-ci.org/ctz/fastpbkdf2.svg?branch=master)](https://travis-ci.org/ctz/fastpbkdf2)
 
 ## Interface
 
@@ -72,8 +72,18 @@ overhead.
 
 The program `multibench` provides a basic performance comparison for using this option.
 
+## Windows
+[Details on building for Windows](WINDOWS.md).
+
 ## License
 [CC0](https://creativecommons.org/publicdomain/zero/1.0/).
+
+## Language bindings
+* [python-fastpbkdf2](https://github.com/Ayrx/python-fastpbkdf2) by [Ayrx](https://github.com/Ayrx).
+* [go-fastpbkdf2](https://github.com/ctz/go-fastpbkdf2) by me.
+* [rust-fastpbkdf2](https://github.com/ctz/rust-fastpbkdf2) by me.
+* [node-fastpbkdf2](https://github.com/S-YOU/node-fastpbkdf2.git) by [S-YOU](https://github.com/S-YOU).
+* [ruby-fastpbkdf2](https://github.com/S-YOU/ruby-fastpbkdf2.git) by [S-YOU](https://github.com/S-YOU).
 
 ## Author
 Joseph Birr-Pixton <jpixton@gmail.com>
