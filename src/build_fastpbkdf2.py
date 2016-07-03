@@ -6,9 +6,22 @@ from __future__ import absolute_import, division, print_function
 
 import os
 
+import sys
+
 from cffi import FFI
 
 DIR = os.path.join(os.path.dirname(__file__), "c")
+
+
+def _get_openssl_libraries(platform):
+    if platform == "win32":
+        return ["libeay32", "crypt32", "advapi32",
+                "gdi32", "user32", "ws2_32"], ["/O2", "/WX", "/nologo"]
+    else:
+        return ["crypto"], ["-std=c99", "-O3", "-g"]
+
+
+lib, compile_args = _get_openssl_libraries(sys.platform)
 
 ffi = FFI()
 ffi.cdef(
@@ -39,10 +52,6 @@ ffi.set_source(
         os.path.join(DIR, "fastpbkdf2.c"),
     ],
     include_dirs=[DIR],
-    libraries=["crypto"],
-    extra_compile_args=[
-        "-std=c99",
-        "-O3",
-        "-g",
-    ]
+    libraries=lib,
+    extra_compile_args=compile_args
 )
