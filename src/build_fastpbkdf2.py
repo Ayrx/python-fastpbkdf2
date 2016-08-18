@@ -15,10 +15,10 @@ import tempfile
 from cffi import FFI
 
 
-TAR_DIR = os.path.join(os.path.dirname(__file__), "fastpbkdf2.tar.gz")
+TAR_FILE = os.path.join(os.path.dirname(__file__), "fastpbkdf2.tar.gz")
 DIR = tempfile.mkdtemp()
 
-with tarfile.open(TAR_DIR) as f:
+with tarfile.open(TAR_FILE) as f:
     f.extractall(DIR)
     DIR = os.path.join(DIR, f.getmembers()[0].name)
 
