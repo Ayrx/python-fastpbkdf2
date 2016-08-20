@@ -8,9 +8,19 @@ import os
 
 import sys
 
+import tarfile
+
+import tempfile
+
 from cffi import FFI
 
-DIR = os.path.join(os.path.dirname(__file__), "c")
+
+TAR_FILE = os.path.join(os.path.dirname(__file__), "fastpbkdf2.tar.gz")
+DIR = tempfile.mkdtemp()
+
+with tarfile.open(TAR_FILE) as f:
+    f.extractall(DIR)
+    DIR = os.path.join(DIR, f.getmembers()[0].name)
 
 
 def _get_openssl_libraries(platform):
