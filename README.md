@@ -10,7 +10,7 @@ with the standard library's `hashlib.pbkdf2_hmac`. Initial testing shows that
 it is about 40% faster than the standard library implementation.
 
 python-fastpbkdf2 supports and is tested against Python versions 2.7, 3.3, 3.4,
-3.5.
+3.5, 3.6.
 
 # Installation
 
